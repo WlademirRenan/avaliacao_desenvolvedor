@@ -1,0 +1,12 @@
+<h1>Ola </h1>
+
+<%= form_for @pedido, url:{action: "index_do"}, html:{multipart: true} do |f| %>
+  <table>
+    <tr>
+      <td><%= f.file_field :arquivo %></td>
+    </tr>
+    <tr>
+      <td><%= f.submit "Enviar" %></td>
+    </tr>
+  <table>
+<% end %>
