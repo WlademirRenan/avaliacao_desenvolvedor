@@ -8,7 +8,6 @@ one:
   endereco: MyString
   fornecedor: MyString
   valor_total: MyString
-  float: MyString
 
 two:
   comprador: MyString
@@ -18,4 +17,3 @@ two:
   endereco: MyString
   fornecedor: MyString
   valor_total: MyString
-  float: MyString

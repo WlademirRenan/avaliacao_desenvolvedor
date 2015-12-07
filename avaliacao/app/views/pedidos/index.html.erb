@@ -1,4 +1,8 @@
-<h1>Ola </h1>
+<style>
+  table{border: 1px solid #cccccc;}
+</style>
+
+<h1>Importar pedidos</h1>
 
 <%= form_for @pedido, url:{action: "index_do"}, html:{multipart: true} do |f| %>
   <table>
@@ -6,7 +10,10 @@
       <td><%= f.file_field :arquivo %></td>
     </tr>
     <tr>
-      <td><%= f.submit "Enviar" %></td>
+      <td align='right'><%= f.submit "Enviar" %></td>
     </tr>
   <table>
 <% end %>
+<% if flash[:notice] -%>
+  <p style="color: red;"><%=h flash[:notice] %></p>
+<% end -%>

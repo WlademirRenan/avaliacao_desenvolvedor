@@ -10,10 +10,15 @@ class Pedido < ActiveRecord::Base
       # separando por tabulação
       pedido = linha.split("\t")
       # criando pedido
-      novo_pedido = Pedido.new(comprador: pedido[0], descricao: pedido[1], preco_unitario: pedido[2],
-      quantidade: pedido[3], endereco: pedido[4], fornecedor: pedido[5], valor_total: (pedido[2].to_f * pedido[3].to_i))
-      # gravando novo pedido
-      novo_pedido.save
+      criar_pedido(pedido)
     end
+  end
+
+  def self.criar_pedido(pedido)
+    novo_pedido = Pedido.new(comprador: pedido[0], descricao: pedido[1],
+      preco_unitario: pedido[2], quantidade: pedido[3], endereco: pedido[4],
+      fornecedor: pedido[5], valor_total: (pedido[2].to_f * pedido[3].to_i))
+    # gravando novo pedido
+    novo_pedido.save
   end
 end
