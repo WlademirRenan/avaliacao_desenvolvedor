@@ -1,4 +1,6 @@
 == README
+Para iniciar o programa sera necessário apenas iniciar o server "rails s" e acessa-lo pelo navegador
+através do endereço localhost:3000 que o formulário para upload do arquivo ira ser exibido
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
